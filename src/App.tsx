@@ -190,7 +190,7 @@ function App() {
       <BrowserRouter>
         <Box sx={{
           minHeight: "100vh",
-          background: "linear-gradient(135deg, #0f172a 0%, #1e1b4b 40%, #0f172a 60%, #172554 100%)",
+          background: "linear-gradient(135deg, #0f172a 0%, #1e1b4b 35%, #2d1b3d 55%, #0f172a 75%, #172554 100%)",
         }}>
           <Navigation />
           <Box sx={{ py: 4 }}>

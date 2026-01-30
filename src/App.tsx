@@ -188,7 +188,10 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <BrowserRouter>
-        <Box sx={{ minHeight: "100vh", bgcolor: "background.default" }}>
+        <Box sx={{
+          minHeight: "100vh",
+          background: "linear-gradient(135deg, #0f172a 0%, #1e1b4b 40%, #0f172a 60%, #172554 100%)",
+        }}>
           <Navigation />
           <Box sx={{ py: 4 }}>
             <Routes>

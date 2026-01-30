@@ -2,30 +2,32 @@ import { createTheme } from "@mui/material/styles";
 
 export const theme = createTheme({
   palette: {
+    mode: "dark",
     primary: {
-      main: "#6366f1", // Indigo
-      light: "#818cf8",
-      dark: "#4f46e5",
+      main: "#818cf8", // Indigo (lighter for dark bg)
+      light: "#a5b4fc",
+      dark: "#6366f1",
     },
     secondary: {
-      main: "#ec4899", // Pink
-      light: "#f472b6",
-      dark: "#db2777",
+      main: "#f472b6", // Pink
+      light: "#f9a8d4",
+      dark: "#ec4899",
     },
     background: {
-      default: "#f8fafc",
-      paper: "#ffffff",
+      default: "#0f172a",
+      paper: "#1e293b",
     },
     text: {
-      primary: "#1e293b",
-      secondary: "#64748b",
+      primary: "#f1f5f9",
+      secondary: "#94a3b8",
     },
     error: {
-      main: "#ef4444",
+      main: "#f87171",
     },
     success: {
-      main: "#22c55e",
+      main: "#4ade80",
     },
+    divider: "rgba(148, 163, 184, 0.12)",
   },
   typography: {
     fontFamily: '"Inter", "Roboto", "Helvetica", "Arial", sans-serif',
@@ -58,10 +60,29 @@ export const theme = createTheme({
         fullWidth: true,
       },
     },
+    MuiInputBase: {
+      styleOverrides: {
+        input: {
+          "&:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus, &:-webkit-autofill:active": {
+            WebkitBoxShadow: "0 0 0 100px #1e293b inset !important",
+            WebkitTextFillColor: "#f1f5f9 !important",
+            caretColor: "#f1f5f9",
+          },
+        },
+      },
+    },
     MuiCard: {
       styleOverrides: {
         root: {
-          boxShadow: "0 4px 6px -1px rgb(0 0 0 / 0.1)",
+          boxShadow: "0 8px 16px -4px rgb(0 0 0 / 0.3)",
+          backgroundImage: "none",
+        },
+      },
+    },
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          backgroundImage: "none",
         },
       },
     },
